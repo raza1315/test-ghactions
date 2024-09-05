@@ -1,0 +1,43 @@
+.PageThird{
+  position: relative;
+  background: #000;
+    height: auto;
+
+
+}
+
+
+.responsive-background {
+  background-image: url('../../assets/team.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Background for smaller screens */
+@media (max-width: 768px) {
+  .responsive-background {
+    background-image: url('../../assets/team-for-mobile.png');
+    background-position: cover;
+    background-size: cover;
+    height: 70vh;
+    margin-bottom: 0px;
+  }
+}
+
+/* Background for very small screens */
+@media (max-width: 480px) {
+  .responsive-background {
+    background-image: url('../../assets/team-for-mobile.png');
+    background-position: cover;
+    background-size: cover;
+    height: 70vh;
+  }
+}
+

@@ -1,0 +1,326 @@
+.team-members-div {
+  font-family: "Manrope", sans-serif;
+  background-color: #303030;
+  color: #fbfbfb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container {
+  padding: 8px 12px;
+}
+
+.team-title {
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.button-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #303030;
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.wrapper-members {
+  box-sizing: border-box;
+  margin: 20px;
+  padding: 20px;
+  max-height: calc(100vh - 4 * 20px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: calc(20px * 2);
+  background: #181818;
+  border: 1px solid #242424;
+  box-shadow: 0 8px 25px #02020280;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 1400px;
+  display: none;
+
+  /* // Scrollbar */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #02020280;
+    border-radius: 4px;
+  }
+
+  .team-wrapper {
+    display: flex;
+    /* flex-flow: row nowrap; */
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    min-height: 30vh;
+
+    .members-name {
+      position: relative;
+      flex: 0 1 auto;
+      display: flex;
+      flex-direction: column;
+      /* width: 15%; */
+      height: 600px;
+      flex-wrap: nowrap;
+    }
+
+    .tile {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      border-radius: 4px;
+      background: #02020280;
+      overflow: hidden;
+      transform: scale(0.7);
+      filter: grayscale(1);
+      transition: all 0.2s ease;
+
+      img {
+        display: flex;
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      &:hover {
+        filter: grayscale(0.6);
+        transform: scale(0.8);
+      }
+
+      &.active {
+        box-shadow: 0 0 10px 10px #181818;
+        background: #ccc;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        transform: scale(1);
+        filter: grayscale(0);
+      }
+    }
+
+    .divider {
+      flex: 0 0 2px;
+      background: #242424;
+      border-radius: 4px;
+      align-self: stretch;
+      box-shadow: 0 0 2px #02020280;
+    }
+
+    .cards-member {
+      flex: 1 1 auto;
+
+      .card-wrapper {
+        position: sticky;
+        top: 0;
+
+        .card-mem {
+          border-radius: 4px;
+          border-bottom: 2px solid #242424;
+          background: linear-gradient(130deg, #303030 0%, #101010 100%);
+          display: flex;
+          align-items: flex-start;
+          flex-flow: column nowrap;
+          visibility: hidden;
+          opacity: 0;
+          transition: all 0.6s ease;
+          position: absolute;
+          top: 0;
+          height: auto;
+          width: 100%;
+
+          .avatar {
+            flex: 1 0 auto;
+            display: flex;
+            width: 100%;
+            /* max-height: 20; */
+            align-self: stretch;
+            border-radius: 4px 4px 0 0;
+            object-fit: cover;
+            pointer-events: none;
+            user-select: none;
+          }
+
+          .info-member {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .name {
+              font-size: 28px;
+              font-weight: 700;
+              letter-spacing: -0.4px;
+            }
+
+            .title {
+              font-size: 18px;
+              font-weight: 500;
+              color: #ffcc70;
+            }
+
+            .bio {
+              font-size: 16px;
+              font-weight: 300;
+              color: #f0f0f0;
+            }
+
+            .socialLinks {
+              width: 100%;
+              height: 50px;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              gap: 25px;
+              margin: 15px 0;
+            }
+          }
+        }
+      }
+
+      input {
+        appearance: unset;
+
+        &:checked + .card-mem {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .intro-wrapper,
+  .card-wrapper {
+    border-top: 2px solid #242424;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column nowrap;
+    min-height: 300px;
+    font-weight: 600;
+    font-size: 36px;
+  }
+
+  .intro-wrapper {
+    border-radius: 4px 4px 0 0;
+    text-shadow: 0 2px 2px #151515;
+    background-image: linear-gradient(130deg, #303030 0%, #101010 100%);
+    font-size: 68px;
+    font-weight: 800;
+    border-top: none;
+    border-bottom: 3px solid #242424;
+  }
+}
+
+.active-members {
+  display: flex;
+}
+
+.actives {
+  background-color: #303030;
+  color: #f0f0f0;
+}
+
+@media screen and (min-width: 1080px) {
+  .wrapper-members {
+    .team-wrapper {
+      .cards-member {
+        .card-wrapper {
+          .card-mem {
+            flex-flow: row wrap;
+
+            .avatar {
+              width: 300px;
+              max-height: unset;
+              border-radius: 4px 0 0 4px;
+            }
+
+            .info-member {
+              padding: calc(20px * 2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.link-div {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+  .btn-container {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .button-team {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 10px;
+  }
+
+  .btn-container {
+    padding: 3px 7px;
+  }
+
+  .info-member {
+    font-size: 15px;
+  }
+  .team-title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .members-name {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .link-div {
+    width: 28px;
+    height: 28px;
+    margin: 0 -5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .link-div {
+    width: 26.5px;
+    height: 26.5px;
+    margin: 0 -8px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .link-div {
+    width: 25px;
+    height: 25px;
+    margin: 0 -10px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .link-div {
+    width: 20px;
+    height: 20px;
+    margin: 0 -10px;
+  }
+}

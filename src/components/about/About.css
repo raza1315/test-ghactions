@@ -1,0 +1,279 @@
+/* style for about page */
+.about-image {
+  background-image: linear-gradient(
+      rgba(129, 39, 109, 0.5),
+      rgba(114, 12, 112, 0.5)
+    ),
+    url("../../assets/bg2.jpg");
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  height: auto;
+  background: #000;
+  margin: 0px;
+  padding: 0px;
+}
+
+.about-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-top: 200px;
+  letter-spacing: 7px;
+}
+
+.about-details {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.about-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 70px;
+  gap: 40px;
+}
+
+.about-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 80%;
+  padding-left: 40px;
+}
+
+.sec1-about-image {
+  padding: 0px 30px;
+}
+
+.tezos-1 {
+  width: 100%;
+  height: 10vh;
+  /* text-align: center; */
+  line-height: 120px;
+  font-size: 5rem;
+  padding-left: 30px;
+  color: #240046;
+}
+
+.about-section2 {
+  background-color: #fff;
+}
+
+.tezos-2 {
+  width: 100%;
+  height: 10vh;
+  line-height: 120px;
+  font-size: 5rem;
+  padding-left: 30px;
+  color: #240046;
+}
+.about-sec2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 70px;
+  font-size: 15px;
+  color: black;
+  background-color: white;
+  font-weight: 400;
+  padding-inline: 30px;
+}
+
+.sec2-subtitle,
+.sec2-subtitle-com {
+  font-size: 2rem;
+}
+
+.sec-about-img {
+  margin-top: 80px;
+  color: black;
+  display: flex;
+  gap: 30px;
+  padding-inline: 40px;
+  background-color: #fff;
+}
+
+.sec2-img {
+  width: 60%;
+}
+
+.sec2-about-img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.sec2-img-text {
+  padding-top: 20px;
+  padding-inline: 40px;
+  margin-bottom: 30px;
+}
+
+.header-about {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+
+  @media (min-width: 30em) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 60em) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  /* // sets up hover state */
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  article {
+    padding: 20px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+  }
+
+  p {
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0;
+  }
+
+  .thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.sec2-text ul li {
+  font-size: 1.2rem;
+}
+
+.item-1 {
+  @media (min-width: 60em) {
+    grid-column: 1 / span 2;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about-text {
+    font-size: 1rem;
+  }
+  .sec1-about-image {
+    width: 100%;
+    height: 80%;
+  }
+  .about-image {
+    background-image: linear-gradient(
+        rgba(129, 39, 109, 0.5),
+        rgba(114, 12, 112, 0.5)
+      ),
+      url("../../assets/bg2.jpg");
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 100%;
+    height: 60vh;
+    z-index: 1;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about-background {
+    flex-direction: column;
+  }
+
+  .tezos-1 {
+    font-size: 3rem;
+  }
+  .tezos-2 {
+    font-size: 2.5rem;
+    padding-left: 10px;
+  }
+  .about-sec2 {
+    flex-direction: column;
+  }
+
+  .sec-about-img {
+    flex-direction: column;
+  }
+
+  .sec2-img {
+    width: 100%;
+  }
+  .sec2-about-img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .sec2-subtitle-com {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+  }
+}

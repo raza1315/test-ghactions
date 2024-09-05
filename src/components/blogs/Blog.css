@@ -1,0 +1,172 @@
+.blogs {
+  position: relative;
+  height: auto;
+  background: #17171e;
+}
+.blog-img {
+  background-image: url("../../assets/hero.png");
+  width: 100%;
+  height: 80vh;
+  background-color: rgba(45, 44, 53, 0.35);
+  z-index: 1;
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog-title h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.blog-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-top: 200px;
+}
+/* .slider-wrapper {
+    margin: 70px 70px 55px;
+    display: flex;
+    flex-direction: row;
+  } */
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 50px;
+  margin-bottom: 40px;
+}
+
+.card-list .card-item {
+  height: 600px;
+  user-select: none;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  width: 60vh;
+  /* background-image: linear-gradient(
+    to top,
+    #ab00f2,
+    #a101e1,
+    #9702d1,
+    #8d03c1,
+    #8304b1,
+    #7c04a7,
+    #74049d,
+    #6d0493,
+    #66038c,
+    #5f0285,
+    #59017e,
+    #520077
+  ); */
+  background: rgba(41, 55, 69, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(167, 167, 169, 0.194);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255,  255,  0.18 );
+  border: 1px solid #ffffff80;
+  /* background-image: linear-gradient(to top, #ab00f2, #a601e9, #a002e0, #9b03d7, #9504ce, #8d04c4, #8604b9, #7e04af, #7303a1, #670293, #5d0185, #520077); */
+}
+
+.card-list .card-item .user-image {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 40px;
+  border: 2px solid #eff0f7;
+}
+.card-list .card-item .user-name {
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: 500;
+  /* height: 100px; */
+}
+
+.card-list .card-item .user-profession {
+  font-size: 16px;
+  color: #e3e3e3;
+  font-weight: 500;
+  margin: 14px 0 40px;
+  text-wrap: wrap;
+  height: 200px;
+}
+
+.card-list .card-item .message-button {
+  font-size: 16px;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #3a0d82;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  height: 50px;
+}
+
+.card-list .card-item .message-button:hover {
+  background: #ffffff1a;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+  background: #fff;
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.slider-wrapper .swiper-slide-button {
+  color: #fff;
+  margin-top: -55px;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 0 20px 40px;
+  }
+  .blog-img {
+    background-image: url("../../assets/hero.png");
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+  }
+  .blog-quote {
+    font-size: 2.5rem;
+    padding-top: 100px;
+  }
+  .blog-title h3 {
+    font-size: 1rem;
+  }
+  .swiper-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+  }
+  .card-list .card-item .user-name {
+    font-size: 20px;
+  }
+  .card-list .card-item .user-profession {
+    font-size: 14px;
+  }
+}

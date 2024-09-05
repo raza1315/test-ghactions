@@ -1,0 +1,51 @@
+/* ----- BASE ----- */
+@font-face {
+  font-family: 'Bring Race';
+  src: url('../public/fonts/Bring\ Race.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+
+}
+
+
+/* ----- SMOOTH SCROLL ----- */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+/* ::-webkit-scrollbar{
+  width: 10px;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #bbb;
+} */
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* global css */
+section {
+  background-color: #151515;
+}
